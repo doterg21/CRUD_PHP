@@ -7,16 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Inicio</title>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style_Registro.css">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Registro</title>
+
 </head>
 
 <body>
     <?php
-    include("nav.php");
     include("conexion.php");
     ?>
     <!--Formulario-->
     <section id="Formulario" class="container col-6">
+
+        <nav class="navbar navbar-light">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Consultar.php">Consultar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Ingreso_Administrador.php">Administrador</a>
+                </li>
+            </ul>
+        </nav>
+
         <h2 style="text-align:center"> FORMULARIO DE REGISTRO A EVENTO </h2>
         <form method="POST" class="row g-3" action="index.php">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -65,14 +84,8 @@
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button value="enviar" name="enviar" type="submit" class="btn btn-success">Enviar</button>
             </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <a class="btn btn-warning" href="index.php" role="button">Volver</a>
-            </div>
         </form>
-    </section>
 
-    <br>
-    <section id="contador" class="container col-5">
         <h5 class="text-center">CONTADOR DE AFOROS</h5>
         <div class='d-flex justify-content-center '>
             <table class="table table-success table-striped">
@@ -146,9 +159,8 @@
                             $nombre, $apellido, $cedula, $email, $sexo,
                             $fecha, $hora, $fecha_registro
                         ]);
-
                         echo "<div class='alert alert-success alert-dismissible fade show fixed-top' role='alert'>
-                                        Te has registrado correctamente :3
+                                        Te has registrado correctamente 
                                         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                                         </div>";
                     }
@@ -157,6 +169,7 @@
         }
     }
     ?>
+    <script src="js/script_Registro.js"></script>
 </body>
 <!--JavaScript--->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

@@ -15,10 +15,7 @@
     <nav>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" href="Vista_Administrador.php">Ver Lista</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cerrar.php" name="cerrar">Cerrar sesion</a>
+                <a class="nav-link active" aria-current="page" href="Cerrar_Administrador.php" name="cerrar">Cerrar sesion</a>
             </li>
         </ul>
     </nav>
@@ -28,7 +25,7 @@
     session_start();
     //COMPRUEBA QUE EL USUARIO ESTA AUTENTICADO
     if ($_SESSION["autenticado"] <> "SI") {
-        header("Location: sing.php");
+        header("Location: Ingreso_Administrador.php");
         exit();
     } else {
 
@@ -37,8 +34,6 @@
         $sentencia = $bd->query("SELECT * FROM persona");
         $persona = $sentencia->fetchAll(PDO::FETCH_OBJ);
     ?>
-
-
         <!--Data table-->
         <h1 class="text-center">Lista de registros</h1>
 
@@ -74,8 +69,8 @@
                                     <td><?php echo $dato->hora; ?></td>
                                     <td><?php echo $dato->fecha_registro; ?></td>
                                     <td>
-                                        <a href="Editar.php?id=<?php echo $dato->id; ?>"><button type="button" class="btn btn-success">Editar</button></a>
-                                        <a href="Eliminar.php?id=<?php echo $dato->id; ?>"><button type="button" class="btn btn-danger">Eliminar</button></a>
+                                        <a href="Editar_Administrador.php?id=<?php echo $dato->id; ?>"><button type="button" class="btn btn-success">Editar</button></a>
+                                        <a href="Eliminar_Administrador.php?id=<?php echo $dato->id; ?>"><button type="button" class="btn btn-danger">Eliminar</button></a>
                                     </td>
                                 </tr>
                         <?php
@@ -84,7 +79,6 @@
                         ?>
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>
