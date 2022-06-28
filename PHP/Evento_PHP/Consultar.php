@@ -18,7 +18,7 @@ include("conexion.php");
     <nav class="navbar navbar-light">
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" href="index.php">Inicio</a>
+                <a class="nav-link active" href="Formulario_Registro.php">Inicio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="Consultar.php">Consultar</a>
