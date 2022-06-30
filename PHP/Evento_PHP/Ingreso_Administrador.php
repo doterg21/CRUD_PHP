@@ -36,9 +36,7 @@
                         <button value="ingresar" name="ingresar" type="submit" class="btn btn-success">Ingresar</button>
                     </div>
                 </form>
-                <div class="form-link">
-                    <span>Deseas registrarte? <a href="#" class="link signup-link">Registrarse</a></span>
-                </div>
+                
             </div>
             <div class="line"></div>
             <div class="media-options">
@@ -46,30 +44,6 @@
                     <span>Regresar</span>
                 </a>
             </div>
-        </div>
-        <!-- Signup Form -->
-        <div class="form signup">
-            <div class="form-content">
-                <header>REGISTRARSE</header>
-                <form action="#">
-                    <div class="field input-field">
-                        <input type="email" placeholder="Usuario" class="input">
-                    </div>
-                    <div class="field input-field">
-                        <input type="password" placeholder="Crear Contraseña" class="password">
-                    </div>
-                    <div class="field input-field">
-                        <input type="password" placeholder="Confirmar Contraseña" class="password">
-                        <i class='bx bx-hide eye-icon'></i>
-                    </div>
-                    <div class="field button-field">
-                        <button>Registrar</button>
-                    </div>
-                </form>
-                <div class="form-link">
-                    <span>Si Estoy Registrado? <a href="#" class="link login-link">Login</a></span>
-                </div>
-            </div>            
         </div>
 
         <?php

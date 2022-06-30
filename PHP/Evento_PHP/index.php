@@ -18,6 +18,44 @@
     <!--Formulario-->
     <section class="container forms">
         <div class="form login">
+
+            <!-- ? Alerts -->
+            <?php if (isset($_GET['message']) && $_GET['message'] == 'error1') { ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Debes ingresar todos los datos en los datos de registro
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+
+            <?php if (isset($_GET['message']) && $_GET['message'] == 'error2') { ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Opps! Las contraseñas no coinciden
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+
+            <?php if (isset($_GET['message']) && $_GET['message'] == 'error3') { ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Opps! El usuario ya se encuentra registrado
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+
+            <?php if (isset($_GET['message']) && $_GET['message'] == 'errorRegistro') { ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Opps! Hubo un error en el registro, intentalo de nuevo
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+
+            <?php if (isset($_GET['message']) && $_GET['message'] == 'success') { ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Usuario registrado con exito
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+            <!-- ? /Alerts -->
+
             <div class="form-content">
                 <header>LOGIN</header>
                 <form method="POST" action="login_usuario.php">
@@ -50,12 +88,15 @@
         <div class="form signup">
             <div class="form-content">
                 <header>REGISTRARSE</header>
-                <form method="POST" action="index.php">
+                <form method="POST" action="registrar_usuario_proceso.php">
                     <div class="field input-field">
                         <input type="text" placeholder="Usuario" class="input" name="Email">
                     </div>
                     <div class="field input-field">
                         <input type="password" placeholder="Crear Contraseña" class="password" name="Clave">
+                    </div>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Repita Contraseña" class="password" name="Confirmar_clave">
                     </div>
                     <div class="field button-field">
                         <button value="ingresar" name="ingresar" type="submit" class="btn btn-success">Registrar</button>
